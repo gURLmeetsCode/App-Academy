@@ -1,0 +1,10 @@
+def wild_sum(n)
+  arr = []
+  by_two = 1.upto(n) {|i| arr << i if n % 2 == 0 }
+  #by_three = 1.upto(n) {|i| arr << i if i < n && n/ 3 }
+  #arr.uniq!
+  #new_arr = arr.inject(:+)
+  arr
+end
+
+wild_sum(16)
