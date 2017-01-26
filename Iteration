@@ -1,0 +1,10 @@
+def every_other_letter(string)
+  new_arr = Array.new
+  split_arr = string.chars
+  split_arr.each_with_index {|val, index| new_arr << val if index % 2 == 0}
+  new_arr
+end
+
+every_other_letter("hello")
+
+#return new a string tha contains every other letter of the original string starting with first character.
