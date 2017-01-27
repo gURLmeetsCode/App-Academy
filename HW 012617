@@ -1,10 +1,28 @@
 def wild_sum(n)
-  arr = []
-  by_two = 1.upto(n) {|i| arr << i if n % 2 == 0 }
-  #by_three = 1.upto(n) {|i| arr << i if i < n && n/ 3 }
-  #arr.uniq!
-  #new_arr = arr.inject(:+)
-  arr
+ arr = []
+ checked = 1.upto(n) do |i| 
+  arr << i if i < n && (i % 2 == 0 && i % 3 != 0) || (i % 2 != 0 && i % 3 == 0)
+ end
+arr.inject(:+)
 end
 
 wild_sum(16)
+
+# Wild Sum
+
+# Define a method, #wild_sum(n) that sums all the numbers less than n that are:
+#   - Divisible by 2 or divisible by 3
+#   - Not divisible by both 2 and 3
+
+# ex: wild_sum(16) ==> 2 + 3 + 4 + 8 + 9 + 10 + 14 + 15 ==> 65
+
+def wild_sum(n)
+  # your code here
+end
+
+puts "------Wild Sum------"
+puts wild_sum(0) == 0
+puts wild_sum(2) == 0
+puts wild_sum(3) == 2
+puts wild_sum(7) == 9
+puts wild_sum(16) == 65
