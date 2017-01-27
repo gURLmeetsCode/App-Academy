@@ -1,0 +1,11 @@
+def two_sum (array, target)
+  #result = true 
+  sum = 0
+  array.each{|i| sum += 1 if target == sum}
+  #.each_with_index{|val, index|result << val val == target}
+end
+
+two_sum([1,2,3,4,5,6], 8)
+
+# approach: check to see if you can iterate 2 by 2 reading from left to right and reverse to get the sum.
+# approach: take the target and use it to see if any numbers in the array equal the value
